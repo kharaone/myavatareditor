@@ -1,0 +1,181 @@
+My Avatar Editor
+
+
+REQUIREMENTS:
+
+- Flash Player 10 or later (web playback)
+- AIR 1.5 or later (desktop application)
+
+
+KNOWN ISSUES:
+
+- When flipping hair part, the hair highlight is not adjusted
+
+  
+CHANGE LIST:
+
+== Feb 16, 2009; ver 1.0.4.0 ==
+
+- Ranges fixed to return 0 for percentAt if min == max (fixes XML scrollbar)
+- JavaScript APIs get/set avatarValue.
+- Many externally facing APIs for both avatar and editor SWFs
+- Added hosted query variable for avatar SWF
+
+
+== Feb 14, 2009; ver 1.0.3.2rc ==
+
+- JavaScript calls for getAvatarXML, setAvatarXML, getAvatarHex, setAvatarHex
+- Handling lack of available avatar character SWF without error
+- mii query parameter recognized (for legacy support of old URLs)
+
+
+== Feb 12, 2009; ver 1.0.3.0rc == 
+
+- Logo link loads the character being viewed
+
+
+== Feb 11, 2009; Version Unknown == 
+
+- Default character zoom in export screen knocked down to 15% (large characters were getting cut off)
+- Logo and link added to character SWF when displayed by itself
+
+
+== Feb 10, 2009; Version Unknown == 
+
+- AIR implementation updated for Flash Player 10/AIR 1.5
+- Favorite Color selection now updates when a new character is loaded
+- Legacy XML parser fixed, allowing loading of older-style XML
+- The assets loaded by the editor (the "character") can be displayed by itself
+- Remembered character data has changed to allow multiple Flash SWFs to use the same data (editor and character) so when you load the editor for the first time it should show the default boy
+- File menu button now at the end of the tabs at the bottom of the screen rather than being in the "General" tab
+- Layout for the image export screen has changed
+- You can now zoom in twice as much as you could before
+- More code refactoring...
+
+
+== Jan 29, 2009; Version Unknown == 
+
+- Fixed lower hair for 8th style (row 3, column 2) on page 6
+- Interface reshuffling
+- Shadow is solid; should cause less problems
+	- option to remove shadow from export
+- Transparent backgrounds for exports show as a checkerboard
+- Client-based (as opposed to server-based) save/load
+- New XML format
+- New randomizer algorithm
+- Requires Flash Player 10
+
+
+== July 19, 2008; Version Unknown ==
+
+- Navigation control buttons were given a low priority listener to prevent errors when accessing objects in the original frame that are not in the new frame
+
+
+== July 17, 2008; Version Unknown ==
+
+- The character shadow is now correctly behind/below the character's feet.
+- The eyes on Page 4 Col 1 Row 2 were given missing eyelashes (seen in icon preview but not on avatar).
+- Character names should now end at a null character. This prevents new short names possibly revealing characters from long names used before the short name was set.
+- Fixed mole size range. It was incorrectly going to 15 when it should have stopped at 8.
+- Removed VirtualMouse integration.
+- Allowed extensions of .mii, .mae, .avatar to be loaded as binary files.  Extensions are now not case sensitive.
+- Fixed load script, failing after mii->avatar transition.
+- Fixed save script, failing after mii->avatar transition.
+
+
+== July 15, 2008; Version Unknown ==
+- Removed Tutorial.
+- Removed Mii Channel theme; reskinned to look more unique
+- Updated XML parsing to be a little more robust and accepting of avatar replacements but still parse mii XML
+
+
+___________________________________
+
+^ My Avatar Editor
+v Mii Editor
+___________________________________
+
+
+== Date/Version Unknown ==
+
+- Tutorial mode
+- Mii URL updated with height/width
+
+
+== Date/Version Unknown ==
+
+- Local shared object integration loading last mii when reloading the editor
+- .mii file association with AIR app
+- David Hawley's work on pants coloring
+	0x00000000 - 0x1FFFFFFF Creates Special Mii - Gold Pants
+	0x20000000 - 0x3FFFFFFF Creates Normal Mii - Black Pants
+	0x40000000 - 0x5FFFFFFF Creates Special Mii - Gold Pants
+	0x60000000 - 0xBFFFFFFF Creates Normal Mii - Black Pants
+	0xC0000000 - 0xDFFFFFFF Creates Foreign Mii - Blue Pants (uneditable)
+	0xE0000000 - 0xFFFFFFFF Creates Normal Mii - Black Pants
+- Intensify glasses colors
+- Mingle pants color change
+- Moved mouth/eyes/eyebrows under hair/hat unless beyond a certain extent outward
+- Work with favorite colors to work better with hats
+
+
+== Date/Version Unknown ==
+
+- Added update Flash player screen
+
+
+== Date/Version Unknown ==
+
+- AIR version correctly loads XML files
+
+
+== Date/Version Unknown ==
+
+- Lip colors
+- Fixed an icon
+- Changed file/export interface
+	- main file screen is now mostly empty with tips for button options
+	- image export is its own interface with new options
+- Added option for exporting to PNG
+- Lowered freckles
+- Character now in full view on main information screen
+- Externalized SliderHandle class
+- Externalized toggles' scripts (Toggle class)
+- Fixed possible error that could occur if clicking on a tab and moving off the too fast 
+
+
+== Date/Version Unknown ==
+
+- Prevented change of Mii Editor screen when on the first Editor screen and loading a new Mii.
+- Export preview is updated in the File screen when a new Mii is loaded.
+- Noted versioning.
+- Added Mii Body.
+- Added simple scrollbar for XML text
+- Export size and background color is retained after leaving and returning to the File screen.
+- Some hair styles have been minorly adjusted
+- Adjusted some colors like making the white favorite color less white
+- Darken buttons on mouse down
+- Changed behavior of character graphics (assets.swf) loading.  Loading is now managed through the main SWF (ClassicGUI class) and the loaded assets SWF is given the document class of MiiCharacterGraphics.
+
+
+== Date/Version Unknown ==
+
+- Created AIR version of the Mii Editor
+
+
+== Date/Version Unknown ==
+
+- Made checks to prevent errors in displaing content on the file screens
+- Updated JPG export with latest corelib build
+
+
+== Date/Version Unknown ==
+
+- Default Mii character now default boy 
+- Extra value for Wii ID
+- Adjustable Image export size and background color
+- Some fixes to character rendering and Mii file format reading primarily with the nose (I think - may still need tweaking)
+- Color a feature items are now highlighted for those currently selected for the character
+- When navigating to a tab, feature set is showing the feature page where the currently selected feature exists
+- Fixed an issue where a random character could result in a facial feature value which was out of range
+

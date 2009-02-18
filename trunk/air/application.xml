@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<application xmlns="http://ns.adobe.com/air/application/1.5"> 
+	
+	<id>com.myavatareditor.MyAvatarEditor</id> 
+	<version>1.0.4.0</version> 
+	<filename>My Avatar Editor</filename> 
+	
+	<name>My Avatar Editor</name> 
+	<description>Create and edit personal avatar characters which you can save to your desktop or export as an image.</description> 
+	<copyright>Copyright 2009, Trevor McCauley</copyright> 
+	<allowBrowserInvocation>true</allowBrowserInvocation>
+	
+	<initialWindow> 
+		<title>My Avatar Editor</title> 
+		<content>myavatareditor.swf</content> 
+		<systemChrome>standard</systemChrome> 
+		<transparent>false</transparent> 
+		<visible>true</visible> 
+		<minimizable>true</minimizable> 
+		<maximizable>true</maximizable> 
+		<resizable>true</resizable> 
+	</initialWindow> 
+	
+	<icon>
+		<image16x16>icons/editor_16.png</image16x16>
+		<image32x32>icons/editor_32.png</image32x32>
+		<image48x48>icons/editor_48.png</image48x48>
+		<image128x128>icons/editor_128.png</image128x128> 
+	</icon>
+	
+	<fileTypes>
+		<fileType>
+			<!--
+				"Native" binary format of the editor, though
+				at this point, its the same as a .mii file.
+			-->
+			<name>com.myavatareditor.console.binary</name>
+			<extension>mae</extension>
+			<description>My Avatar Editor Binary File</description>
+			<contentType>binary/x-mae</contentType>
+			<icon>
+				<image16x16>icons/file_16.png</image16x16>
+				<image32x32>icons/file_32.png</image32x32>
+				<image48x48>icons/file_48.png</image48x48>
+				<image128x128>icons/file_128.png</image128x128>
+			</icon>
+		</fileType>
+		<fileType>
+			<!--
+				Mii character file as defined by other applications
+				which extracts or creates them.  MyAvatarEditor supports
+				these files but does not natively save to them instead
+				favoring mae (which currently is the same thing).
+			-->
+			<name>mii</name>
+			<extension>mii</extension>
+			<description>Mii Character File</description>
+			<contentType>binary/x-mii</contentType>
+			<icon>
+				<image16x16>icons/file_16.png</image16x16>
+				<image32x32>icons/file_32.png</image32x32>
+				<image48x48>icons/file_48.png</image48x48>
+				<image128x128>icons/file_128.png</image128x128>
+			</icon>
+		</fileType>
+	</fileTypes>
+</application>
