@@ -231,6 +231,7 @@ package com.myavatareditor.fileio {
 			try {
 				var localAvatars:SharedObject = SharedObject.getLocal(id, "/");
 				localAvatars.data.avatarData = data;
+				localAvatars.flush();
 				localAvatars = null;
 			}catch(error:Error) {
 				return false;
