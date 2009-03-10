@@ -14,6 +14,12 @@ KNOWN ISSUES:
   
 CHANGE LIST:
 
+== Mar 10, 2009; ver 1.0.5.0 ==
+
+- Made sure character link was updated more frequently when most features were selected
+- Added call to flush when saving character data to assure update to character shared object 
+- Added an update message to the character SWF if users do not have Flash Player 10
+
 == Feb 16, 2009; ver 1.0.4.0 ==
 
 - Ranges fixed to return 0 for percentAt if min == max (fixes XML scrollbar)

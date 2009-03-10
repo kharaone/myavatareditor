@@ -164,7 +164,7 @@ package com.myavatareditor.fla.editor {
 			value			= AvatarCharacter.frameToValue(name, value + 1);
 			editor.avatarData[name] = value;
 			updateSelectedItem();
-			drawCharacter();
+			editor.draw();
 		}
 		
 		public function drawItemsPage():void {
@@ -273,7 +273,7 @@ package com.myavatareditor.fla.editor {
 			var type:String = event.currentTarget.type;
 			editor.avatarData[type + "Color"] = int(event.currentTarget.name.slice(5));
 			updateSelectedColor(type);
-			drawCharacter();
+			editor.draw();
 		}
 		
 		public function updateSelectedColor(type:String):void {
@@ -337,7 +337,7 @@ package com.myavatareditor.fla.editor {
 			var change:int	= int(event.currentTarget.change);
 			var value:int	= int(editor.avatarData[name]);
 			editor.avatarData[name] = AvatarCharacter.clampValue(name, value + change);
-			drawCharacter();
+			editor.draw();
 		}
 		
 		// fini
@@ -363,8 +363,7 @@ package com.myavatareditor.fla.editor {
 		protected function changeToggleHandler(event:MouseEvent):void {
 			var name:String			= event.currentTarget.name.slice(7);
 			editor.avatarData[name]	= editor.avatarData[name] ? 0 : 1;
-			drawCharacter();
-			drawGUI();
+			editor.draw();
 		}
 		
 		

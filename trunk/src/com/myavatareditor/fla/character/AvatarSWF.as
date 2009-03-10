@@ -54,6 +54,7 @@ package com.myavatareditor.fla.character {
 		// timeline instances
 		public var avatarCharacter:AvatarCharacter;
 		public var versionText:TextField;
+		public var updateFPMessage:MovieClip;
 		public var logoLink:LogoLink;
 		public var isNested:Boolean = false;
 		public var isHosted:Boolean = false;
@@ -134,6 +135,8 @@ package com.myavatareditor.fla.character {
 		 */
 		public function AvatarSWF() {
 			super();
+			
+			updateFPMessage.visible = false;
 			
 			// version from text field
 			if (versionText){
